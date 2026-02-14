@@ -1,0 +1,199 @@
+:root {
+  --pink: #ff8fab;
+  --light-pink: #ffc8dd;
+  --dark-pink: #fb6f92;
+  --stem-green: #55a630;
+  --wrapper: #ede0d4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  animation: pastelBG 8s infinite alternate;
+}
+
+@keyframes pastelBG {
+  0% { background: linear-gradient(135deg, #ffd6ec, #e0c3fc); }
+  100% { background: linear-gradient(135deg, #ffc8dd, #bde0fe); }
+}
+
+h1 {
+  margin-top: 40px;
+  color: #ff2e8b;
+}
+
+/* ---------------- BOUQUET ---------------- */
+
+.bouquet {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.flower {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  animation: sway 3s ease-in-out infinite alternate;
+}
+
+.petals {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: var(--pink);
+  border-radius: 50%;
+  top: 12px;
+  left: 12px;
+  box-shadow:
+    0 -15px 0 var(--pink),
+    0 15px 0 var(--pink),
+    15px 0 0 var(--pink),
+    -15px 0 0 var(--pink);
+}
+
+.center {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ffea00;
+  border-radius: 50%;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+}
+
+.f1 { top: 0; left: 80px; }
+.f2 { top: 30px; left: 40px; --pink: var(--light-pink); animation-delay: 0.5s; }
+.f3 { top: 30px; left: 120px; --pink: var(--dark-pink); animation-delay: 1s; }
+.f4 { top: 70px; left: 60px; animation-delay: 1.5s; }
+.f5 { top: 70px; left: 100px; --pink: var(--light-pink); animation-delay: 0.2s; }
+
+.stem {
+  position: absolute;
+  width: 4px;
+  height: 120px;
+  background: var(--stem-green);
+  bottom: 40px;
+  transform-origin: bottom center;
+  border-radius: 2px;
+}
+
+.s1 { transform: rotate(-15deg); left: 90px; }
+.s2 { transform: rotate(-5deg); left: 95px; }
+.s3 { transform: rotate(5deg); left: 100px; }
+.s4 { transform: rotate(15deg); left: 105px; }
+.s5 { transform: rotate(0deg); left: 98px; }
+
+.wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 80px;
+  background: var(--wrapper);
+  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%);
+  z-index: 1;
+  border-bottom: 5px solid #d4a373;
+}
+
+@keyframes sway {
+  from { transform: translateY(0) rotate(0deg); }
+  to { transform: translateY(-5px) rotate(2deg); }
+}
+
+/* ---------------- HAMSTER ---------------- */
+
+.hamster-container {
+  width: 250px;
+  margin: 20px auto;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.hamster-body {
+  width: 150px;
+  height: 120px;
+  background: #d4a373;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hamster-ear {
+  width: 40px;
+  height: 40px;
+  background: #e5989b;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+}
+
+.hamster-ear.left { left: 10px; }
+.hamster-ear.right { right: 10px; }
+
+.hamster-eye {
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+}
+
+.hamster-eye.left { left: 40px; }
+.hamster-eye.right { right: 40px; }
+
+.hamster-mouth {
+  width: 20px;
+  height: 10px;
+  border-bottom: 3px solid black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30px;
+  left: 65px;
+}
+
+/* ---------------- MESSAGE ---------------- */
+
+.message-card {
+  width: 240px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin: 20px auto;
+}
+
+/* ---------------- HEARTS ---------------- */
+
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  animation: rise 6s linear infinite;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-800px); opacity: 0; }
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ff4fa3;
+  color: white;
+  cursor: pointer;
+}

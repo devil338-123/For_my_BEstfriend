@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Singer 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>To My Beautiful Singer 🎤💖</h1>
+
+<!-- 🌸 Animated Bouquet -->
+<div class="bouquet">
+
+  <div class="flower f1"><div class="petals"></div><div class="center"></div></div>
+  <div class="flower f2"><div class="petals"></div><div class="center"></div></div>
+  <div class="flower f3"><div class="petals"></div><div class="center"></div></div>
+  <div class="flower f4"><div class="petals"></div><div class="center"></div></div>
+  <div class="flower f5"><div class="petals"></div><div class="center"></div></div>
+
+  <div class="stem s1"></div>
+  <div class="stem s2"></div>
+  <div class="stem s3"></div>
+  <div class="stem s4"></div>
+  <div class="stem s5"></div>
+
+  <div class="wrapper"></div>
+</div>
+
+
+<!-- 🐹 Animated Hamster -->
+<div class="hamster-container">
+    <div class="hamster-body">
+        <div class="hamster-ear left"></div>
+        <div class="hamster-ear right"></div>
+        <div class="hamster-eye left"></div>
+        <div class="hamster-eye right"></div>
+        <div class="hamster-mouth"></div>
+    </div>
+</div>
+
+<div class="message-card">
+    You are not just my best friend…
+you are one of the greatest blessings in my life.
+
+I honestly don’t know what I did to deserve a friend like you,
+but I feel lucky every single day that I have you.
+
+Your presence alone makes my world brighter,
+and knowing you’re in my life gives me comfort I can’t explain 💖
+</div>
+
+<a href="page2.html"><button>Next ➜</button></a>
+
+<script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHeart, 600);
+</script>
+
+</body>
+</html>
